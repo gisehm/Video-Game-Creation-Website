@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <div class="container mt-4" id="welcome">
+    <div class="row">
+      <div class="col-md-9">
+        <h1>Learn Video Game Creation!</h1> <br>
+        <h3>A Beginner's Guide to Video Game Creation</h3>
+      </div>
+      <div class="col-md-3">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/gridoffset-videogames-1-1585583517.jpg"
+             width="60%" height="auto"
+             alt="Video game collage">
+      </div>
+    </div>
+  </div>
+
+  <div id="intro" class="container mt-3">
+    <h5>
+      Over the past few decades, video game popularity has grown, and many people want to learn how to create their own games.
+      This beginner guide will walk you through the basics step by step.
+    </h5>
+  </div>
+
+
+  <div class="container mt-4 text-center">
+    <form action="/start" method="post">
+      <button class="btn btn-primary btn-lg">Start Lesson</button>
+    </form>
+  </div>
+
+{% endblock %}

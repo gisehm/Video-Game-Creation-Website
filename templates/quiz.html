@@ -1,18 +1,45 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Quiz</title>
-</head>
-<body>
-    <h2>{{ q.question }}</h2>
+{% extends "layout.html" %}
 
-    <form method="post">
-        {% for choice in q.choices %}
-            <input type="radio" name="answer" value="{{ choice }}" required>
-            {{ choice }}<br>
-        {% endfor %}
+{% block content %}
+<div class="container mt-5 d-flex justify-content-center">
 
-        <button type="submit">Next</button>
+  <div class="card p-5 shadow-lg" style="max-width:650px; width:100%; border-radius:15px;">
+
+    <small class="text-muted">Question {{ num }} of {{ total }}</small>
+
+    <div class="progress mt-2 mb-4">
+      <div class="progress-bar" style="width: {{ (num / total * 100)|int }}%"></div>
+    </div>
+
+    <h4 class="fw-bold">{{ q.question }}</h4>
+
+    <form method="POST" class="mt-4">
+
+      {% for choice in q.choices %}
+      <div class="choice-box p-3 border rounded mb-3" style="cursor:pointer;">
+        <input type="radio" name="answer" value="{{ choice }}" required>
+        {{ choice }}
+      </div>
+      {% endfor %}
+
+      <div class="text-end">
+        <button type="submit" class="btn btn-primary">Next →</button>
+      </div>
+
     </form>
-</body>
-</html>
+
+  </div>
+
+</div>
+
+<script>
+$(document).ready(function(){
+  $(".choice-box").click(function(){
+    $(".choice-box").removeClass("bg-light border-primary");
+    $(this).addClass("bg-light border-primary");
+    $(this).find("input").prop("checked", true);
+  });
+});
+</script>
+
+{% endblock %}

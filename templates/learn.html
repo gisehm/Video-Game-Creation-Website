@@ -1,12 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Lesson</title>
-</head>
-<body>
-    <h1>{{ lesson.title }}</h1>
-    <p>{{ lesson.content }}</p>
+{% extends "layout.html" %}
 
-    <a href="/learn/{{ num + 1 }}">Next</a>
-</body>
-</html>
+{% block content %}
+<div class="container mt-5 d-flex justify-content-center">
+
+  <div class="card p-5 shadow-lg text-center" style="max-width: 700px; width:100%; border-radius:15px;">
+
+    <h2 class="fw-bold">{{ lesson.title }}</h2>
+    <p class="lead mt-3">{{ lesson.content }}</p>
+
+    <div class="mt-4">
+      <img src="https://unity.com/sites/default/files/styles/16_9_960w/public/2021-11/Unity-Editor.jpg"
+           class="img-fluid rounded">
+    </div>
+
+    <div class="mt-5 d-flex justify-content-between">
+      {% if num > 1 %}
+      <a href="/learn/{{ num-1 }}" class="btn btn-outline-secondary">← Back</a>
+      {% else %}
+      <span></span>
+      {% endif %}
+
+      <a href="/learn/{{ num+1 }}" class="btn btn-primary">Next →</a>
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

@@ -3,28 +3,18 @@ from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 
 LESSONS = {
-    1: {"title": "Step 1: Software Setup", "content": "Download Unity and Visual Studio Code."},
-    2: {"title": "Step 2: Create Project", "content": "Create a 2D project in Unity."},
-    3: {"title": "Step 3: Add Assets", "content": "Import assets into your game environment."},
-    4: {"title": "Step 4: Animator Window", "content": "Use the Animator window to control animations."}
+    1: {"title": "Step 1: Software Setup", "content": "Download Unity and VS Code."},
+    2: {"title": "Step 2: Create Project", "content": "Create a 2D Unity project."},
+    3: {"title": "Step 3: Add Assets", "content": "Import assets into Unity."}
 }
 
 QUIZ = {
-    1: {
-        "question": "What is an asset?",
-        "choices": ["Only code", "Any file used in a game", "Only images"],
-        "answer": "Any file used in a game"
-    },
-    2: {
-        "question": "Which window manages animations?",
-        "choices": ["Scene Window", "Animator Window", "Project Window"],
-        "answer": "Animator Window"
-    }
+    1: {"question": "What is an asset?", "choices": ["Only code", "Any file used in a game", "Only images"], "answer": "Any file used in a game"},
+    2: {"question": "Which window organizes files?", "choices": ["Scene", "Project", "Game"], "answer": "Project"},
+    3: {"question": "What controls animations?", "choices": ["Animator", "Hierarchy", "Inspector"], "answer": "Animator"}
 }
 
-user_data = {
-    "answers": []
-}
+user_data = {"answers": []}
 
 @app.route("/")
 def home():
@@ -37,18 +27,15 @@ def start():
 
 @app.route("/learn/<int:num>")
 def learn(num):
-    lesson = LESSONS.get(num)
-
-    if not lesson:
+    if num not in LESSONS:
         return redirect(url_for("quiz", num=1))
+    return render_template("learn.html", lesson=LESSONS[num], num=num)
 
-    return render_template("learn.html", lesson=lesson, num=num)
-
-@app.route("/quiz/<int:num>", methods=["GET", "POST"])
+@app.route("/quiz/<int:num>", methods=["GET","POST"])
 def quiz(num):
     if request.method == "POST":
         user_data["answers"].append(request.form.get("answer"))
-        return redirect(url_for("quiz", num=num + 1))
+        return redirect(url_for("quiz", num=num+1))
 
     if num not in QUIZ:
         return redirect(url_for("results"))
@@ -58,11 +45,9 @@ def quiz(num):
 @app.route("/results")
 def results():
     score = 0
-
     for i, ans in enumerate(user_data["answers"]):
-        if ans == QUIZ[i + 1]["answer"]:
+        if ans == QUIZ[i+1]["answer"]:
             score += 1
-
     return render_template("results.html", score=score, total=len(QUIZ))
 
 if __name__ == "__main__":

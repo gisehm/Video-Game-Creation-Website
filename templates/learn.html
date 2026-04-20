@@ -9,8 +9,17 @@
     <p class="lead mt-3">{{ lesson.content }}</p>
 
     <div class="mt-4">
-      <img src="https://unity.com/sites/default/files/styles/16_9_960w/public/2021-11/Unity-Editor.jpg"
-           class="img-fluid rounded">
+      <img src="{{ lesson.img1 }}"
+      class="img-fluid rounded"> <br>
+      {{lesson.p1}} <br><br>
+
+      <img src="{{ lesson.img2 }}"
+      class="img-fluid rounded"> <br>
+      {{lesson.p2}} <br><br>
+
+      <img src="{{ lesson.img3 }}"
+      class="img-fluid rounded"> <br>
+      {{lesson.p3}} <br><br>
     </div>
 
     <div class="mt-5 d-flex justify-content-between">

@@ -19,6 +19,7 @@ To accomplish this, we first created a welcoming layout and homepage for the use
 
 - *Python*
 - *HTML/CSS*
+- *JavaScript*
 - *jQuery*
 - *Flask*
 - *Visual Studio Code*

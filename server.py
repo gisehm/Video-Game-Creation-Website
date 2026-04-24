@@ -5,7 +5,7 @@ app.secret_key = "our_secret_key_:)!"
 
 LESSONS = {
   1: {"title": "Step 1: SOFTWARE SETUP", "content": "Download Unity and Visual Studio Code.",
-    "img1": "https://live.staticflickr.com/65535/55218872808_945dba858d_z.jpg", "img2": "https://live.staticflickr.com/65535/55217817002_04248170ea.jpg",
+    "img1": "https://live.staticflickr.com/65535/55218872808_5db1e6bcbd.jpg", "img2": "https://live.staticflickr.com/65535/55217817002_04248170ea.jpg",
     "p1": "Before we jump in, make sure to create an account with and also download Unity, which is where we will be creating the actual video game. Along with Unity, also make sure to download Visual Studio Code, which is where we’ll be writing the code for the video game.",
     "p2": "For further instructions on this, there are many free tutorials to be found online about downloading both Unity and Visual Studio Code! If you’ve already completed these steps, feel free to press ‘NEXT’!"},
   2: {"title": "Step 2: CREATE A PROJECT", "content": "Create your 2D game!",
@@ -32,7 +32,7 @@ LESSONS = {
     "p1": "After pressing this button, you will be brought to your project, where you must download and then import the package to actually see it within the Assets folder in your Project Window. When you reach this page, press ‘Import’ to successfully add your assets!",
     "p2": "After downloading and importing the package to your project, you should see it within your Assets folder, as shown on the left (SPUM)."},
   8: {"title": "Step 7: SETTING THE SCENE", "content": "Add GameObjects to your game!", 
-    "img1": "https://live.staticflickr.com/65535/55219114155_b8b80ef5bc_c.jpg", "img2": "https://live.staticflickr.com/65535/55218872708_4a2f8e32d4_w.jpg", "img3": "https://live.staticflickr.com/65535/55218968544_3b9fc4dda4.jpg",
+    "img1": "https://live.staticflickr.com/65535/55219114155_b8b80ef5bc_c.jpg", "img2": "https://live.staticflickr.com/65535/55218872708_e6334cb0e2_n.jpg", "img3": "https://live.staticflickr.com/65535/55218968544_3b9fc4dda4.jpg",
     "p1": "Drag an asset from your Assets folder to the Scene Window. Rename it 'human'. The Scene Window enables the placement of all GameObjects that will be used in the game.",
     "p2": "On the right is the Inspector Window, which displays information about the currently selected GameObject, including its position and other components it has.",
     "p3": "A GameObject represents any object that can be placed directly in the Hierarchy or the Scene. On the left, we see the Hierarchy Window, which lists all GameObjects present in the scene."},
@@ -46,11 +46,11 @@ LESSONS = {
     "p2": "From here, go to the Parameters tab and create a 'Bool' object. Name it 'isJumping'.",
     "p3": "Make a transition leading from 'Idle' to 'Astronaut_Jump' and another transition leading from 'Astronaut_Jump' to 'Idle'."},
   12: {"title": "Step 10: PREPPING THE CHARACTER ANIMATION", "content": "Fix the character animation!", 
-    "img1": "https://live.staticflickr.com/65535/55217818162_4500e43a29_z.jpg", "img2": "https://live.staticflickr.com/65535/55217818252_1fec07ef65_m.jpg",
+    "img1": "https://live.staticflickr.com/65535/55217818162_4500e43a29_z.jpg", "img2": "https://live.staticflickr.com/65535/55217818252_8c46ca31a2_n.jpg",
     "p1": "In the Inspector window of the arrow connecting 'Idle' to 'Astronaut_Jump', go to Conditions and press '+'. It should automatically show 'isJumping, true'.",
     "p2": "In the Inspector window of the arrow connecting 'Astronaut_Jump' to 'Idle', go to Conditions and press '+'. Change it to show 'isJumping, false'."},
   13: {"title": "Step 11: PREPPING THE CHARACTER ANIMATION PT. 2", "content": "Fix the character animation!", 
-    "img1": "https://live.staticflickr.com/65535/55218968664_1a64245db7_n.jpg",
+    "img1": "https://live.staticflickr.com/65535/55218968664_fa7660d6a9_w.jpg",
     "p1": "After this, you can go back to AstronautIdle. From here, press 'Add Component' and create a 'New script' named 'AstronautJump'.",
     "p2": "Also, ensure that it has an Animator where the Controller is AstronautIdle.",
     "p3": "Now, you can double-press the script ('AstronautJump') in order to access and begin editing it."},
@@ -77,11 +77,12 @@ LESSONS = {
   22: {"title": "Step 17: FINALIZING THE ANIMATION", "content": "Add the final touches!", 
     "img1": "https://live.staticflickr.com/65535/55218873628_0d4d4889e0_z.jpg", "img2": "https://live.staticflickr.com/65535/55218969504_0f56357bba_n.jpg",
     "p1": "Upon completing the code and going back to Unity, go back to where your AstronautJump Script is, and you’ll notice a new slot with the name “Jump” has shown up. Press the circle to the right of it and press on AstronautIdle.",
-    "p2": "You have now officially completed the code and set up to deploy your first animation. Now, if you play the game and press the Spacebar, your astronaut should look as if they’re jumping!"}
+    "p2": "You have now completed the code and set up to deploy your first animation. Now, if you click on the 'Play' button on the top of the screen and press the Spacebar, your astronaut should look as if they’re jumping! By pressing the 'Play' button that is at the top of the screen, you have officially entered the Game Window to see your game in action!",
+    "p3": "CONGRATULATIONS! Press 'NEXT' to access the final quiz!"}
 }
 
 QUIZ = {
-    1: {
+  1: {
     "img": "https://live.staticflickr.com/65535/55219115200_cfbecb3e67_c.jpg",
     "question": "What is normally found in the Assets folder?",
     "choices": ["Just the scripts/code for the game", "Any file that is or can be used as a part of a game", "Just the images for the game", "Images and audio"],
@@ -122,6 +123,36 @@ QUIZ = {
     "question": "Which of these if statements is invalid?",
     "choices": ["if (Input.GetKeyDown(KeyCode.D)){run.SetBool('isRunning', true);}", "if (Input.GetKeyDown(KeyCode.J));{jump.SetBool('isJumping', true);}", "if (Input.GetKeyDown(KeyCode.Space)){jump.SetBool('isJumping', false);}", "None of the above"],
     "answer": "if (Input.GetKeyDown(KeyCode.J));{jump.SetBool('isJumping', true);}"
+  },
+  8: {
+    "img": "https://live.staticflickr.com/65535/55218969529_cdbd709ec3_c.jpg",
+    "question": "What is the difference between void Start() and void Update()?",
+    "choices": ["void Update() plays only once and void Start() plays over and over throughout the game", "void Start() plays only once and void Update() plays over and over throughout the game", "void Start() is ONLY for creating variables", "There is no difference"],
+    "answer": "void Start() plays only once and void Update() plays over and over throughout the game"
+  },
+  9: {
+    "img": "https://live.staticflickr.com/65535/55218716051_edcd274eed_w.jpg",
+    "question": "What is the function of an ‘if’ statement?",
+    "choices": ["A conditional which specifies that “if ‘this’ is true, then do ‘that’”", "A statement used to declare variables", "A conditional that constantly loops until it's true"],
+    "answer": "A conditional which specifies that “if ‘this’ is true, then do ‘that’”"
+  },
+  10: {
+    "img": "https://live.staticflickr.com/65535/55218969504_0f56357bba_n.jpg",
+    "question": "What are the differences between the Scene Window and the Game Window (pictured above)?",
+    "choices": ["You can fly around and zoom out the camera in the Game Window", "There is no difference", "The Scene Window displays what the player sees when actively playing", "The Scene Window is mostly used for editing the game while the Game Window is to test and view the game in action"],
+    "answer": "The Scene Window is mostly used for editing the game while the Game Window is to test and view the game in action"
+  },
+  11: {
+    "img": "https://live.staticflickr.com/65535/55227278988_175852a160.jpg",
+    "question": "What is the name and function of this window?",
+    "choices": ["Hierarchy Window which lists all GameObjects present in the scene", "Inspector Window which displays information about the currently selected GameObject", "Project Window which displays any and all assets that could potentially be included in a game", "Inspector Window which enables placement of all GameObjects that will be used in the game"],
+    "answer": "Inspector Window which displays information about the currently selected GameObject"
+  },
+  12: {
+    "img": "https://live.staticflickr.com/65535/55227360069_07532bf06c.jpg",
+    "question": "What is the name and function of this window?",
+    "choices": ["Hierarchy Window is to test and view the game in action", "Project Window which displays any and all assets that could potentially be included in a game", "Hierarchy Window which lists all GameObjects present in the scene", "Inspector Window which displays information about the currently selected GameObject"],
+    "answer": "Hierarchy Window which lists all GameObjects present in the scene"
   }
 }
 
@@ -130,7 +161,8 @@ QUIZSETS = {
   9: [2, 3],
   14: [4, 5],
   16: [6],
-  20: [7]
+  20: [7],
+  23: [8, 9, 10, 11, 12]
 }
 
 user_data = {"answers": []}
@@ -148,7 +180,7 @@ def start():
 def learn(num):
   if num in QUIZSETS:
     return redirect(url_for("quiz", curr=num, step=1))
-  if num > 22:
+  if num > 23:
     return redirect(url_for("results"))
   return render_template("learn.html", lesson=LESSONS[num], num=num)
 

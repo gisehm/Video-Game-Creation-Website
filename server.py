@@ -86,73 +86,85 @@ QUIZ = {
     "img": "https://live.staticflickr.com/65535/55219115200_cfbecb3e67_c.jpg",
     "question": "What is normally found in the Assets folder?",
     "choices": ["Just the scripts/code for the game", "Any file that is or can be used as a part of a game", "Just the images for the game", "Images and audio"],
-    "answer": "Any file that is or can be used as a part of a game"
+    "answer": "Any file that is or can be used as a part of a game",
+    "hint": "The asset folder holds ANYTHING game related!"
   },
   2: {
     "img": "https://live.staticflickr.com/65535/55219114155_b8b80ef5bc_c.jpg",
     "question": "What are the four major parts of the Unity environment?",
     "choices": ["Asset Window, Game Window, Hierarchy Window, Inspector Window.", "Asset Window, Scene Window, Hierarchy Window, Information Window.", "Project Window, Game Window, Hierarchy Window, Inspector Window.", "Project Window, Scene Window, Hierarchy Window, Inspector Window."],
-    "answer": "Project Window, Scene Window, Hierarchy Window, Inspector Window."
+    "answer": "Project Window, Scene Window, Hierarchy Window, Inspector Window.",
+    "hint": "While the Game Window is a window, it is not often used when actively editing a game and thus, isn't one of the major parts!"
   },
   3: {
     "img": "https://live.staticflickr.com/65535/55219114155_b8b80ef5bc_c.jpg",
     "question": "How would you describe a GameObject?",
     "choices": ["It can be placed in the Hierarchy or Scene, and you can see its information in the Inspector Window.", "It can only be placed in the Scene, and you can see its information in the Hierarchy Window.", "It can only be placed in the Project Window, and you can see its information in the Scene Window.", "It can only be placed in the Hierarchy, and you can see its information in the Inspector Window."],
-    "answer": "It can be placed in the Hierarchy or Scene, and you can see its information in the Inspector Window."
+    "answer": "It can be placed in the Hierarchy or Scene, and you can see its information in the Inspector Window.",
+    "hint": "A GameObject can be placed in either the Scene or Hierarchy!"
   },
   4: {
     "img": "https://live.staticflickr.com/65535/55218872663_6b0dcd96e8_c.jpg",
     "question": "What is the window used to manage the animations?",
     "choices": ["Animation Window", "Game Window", "Animator Window", "Layers Window"],
-    "answer": "Animator Window"
+    "answer": "Animator Window",
+    "hint": "Look at the name of the window next to the Scene and/or Game Windows, on the top of your screen!"
   },
   5: {
     "img": "https://live.staticflickr.com/65535/55218872683_87606638da_c.jpg",
     "question": "What data type is used to tell if the character is jumping?",
     "choices": ["char", "bool", "float", "short"],
-    "answer": "bool"
+    "answer": "bool",
+    "hint": "The data type that determines true or false!"
   },
   6: {
     "img": "https://live.staticflickr.com/65535/55218969529_cdbd709ec3_c.jpg",
     "question": "If you want an action to run more than once, you should place it in void Start()",
     "choices": ["True", "False"],
-    "answer": "False"
+    "answer": "False",
+    "hint": "Note the difference between the words 'Start' and 'Update'!"
   },
   7: {
     "img": "https://live.staticflickr.com/65535/55217817947_5197820229_c.jpg",
     "question": "Which of these if statements is invalid?",
-    "choices": ["if (Input.GetKeyDown(KeyCode.D)){run.SetBool('isRunning', true);}", "if (Input.GetKeyDown(KeyCode.J));{jump.SetBool('isJumping', true);}", "if (Input.GetKeyDown(KeyCode.Space)){jump.SetBool('isJumping', false);}", "None of the above"],
-    "answer": "if (Input.GetKeyDown(KeyCode.J));{jump.SetBool('isJumping', true);}"
+    "choices": ["if (Input.GetKeyDown(KeyCode.D))  {  run.SetBool('isRunning', true);  }", "if (Input.GetKeyDown(KeyCode.J));  {  jump.SetBool('isJumping', true);  }", "if (Input.GetKeyDown(KeyCode.Space))  {  jump.SetBool('isJumping', false);  }", "None of the above"],
+    "answer": "if (Input.GetKeyDown(KeyCode.J));  {  jump.SetBool('isJumping', true);  }",
+    "hint": "Make sure the syntax, like placement of semicolons and parentheses, are correct!"
   },
   8: {
     "img": "https://live.staticflickr.com/65535/55218969529_cdbd709ec3_c.jpg",
     "question": "What is the difference between void Start() and void Update()?",
     "choices": ["void Update() plays only once and void Start() plays over and over throughout the game", "void Start() plays only once and void Update() plays over and over throughout the game", "void Start() is ONLY for creating variables", "There is no difference"],
-    "answer": "void Start() plays only once and void Update() plays over and over throughout the game"
+    "answer": "void Start() plays only once and void Update() plays over and over throughout the game",
+    "hint": "Note the difference between the words 'Start' and 'Update'!"
   },
   9: {
     "img": "https://live.staticflickr.com/65535/55218716051_edcd274eed_w.jpg",
     "question": "What is the function of an ‘if’ statement?",
     "choices": ["A conditional which specifies that “if ‘this’ is true, then do ‘that’”", "A statement used to declare variables", "A conditional that constantly loops until it's true"],
-    "answer": "A conditional which specifies that “if ‘this’ is true, then do ‘that’”"
+    "answer": "A conditional which specifies that “if ‘this’ is true, then do ‘that’”",
+    "hint": "An if statement does an action(s) based on a specified condition(s)!"
   },
   10: {
     "img": "https://live.staticflickr.com/65535/55218969504_0f56357bba_n.jpg",
     "question": "What are the differences between the Scene Window and the Game Window (pictured above)?",
     "choices": ["You can fly around and zoom out the camera in the Game Window", "There is no difference", "The Scene Window displays what the player sees when actively playing", "The Scene Window is mostly used for editing the game while the Game Window is to test and view the game in action"],
-    "answer": "The Scene Window is mostly used for editing the game while the Game Window is to test and view the game in action"
+    "answer": "The Scene Window is mostly used for editing the game while the Game Window is to test and view the game in action",
+    "hint": "The Scene Window is meant for editing! Try playing around with aspects of both windows!"
   },
   11: {
     "img": "https://live.staticflickr.com/65535/55227278988_175852a160.jpg",
     "question": "What is the name and function of this window?",
     "choices": ["Hierarchy Window which lists all GameObjects present in the scene", "Inspector Window which displays information about the currently selected GameObject", "Project Window which displays any and all assets that could potentially be included in a game", "Inspector Window which enables placement of all GameObjects that will be used in the game"],
-    "answer": "Inspector Window which displays information about the currently selected GameObject"
+    "answer": "Inspector Window which displays information about the currently selected GameObject",
+    "hint": "This is on the right side of your screen!"
   },
   12: {
     "img": "https://live.staticflickr.com/65535/55227360069_07532bf06c.jpg",
     "question": "What is the name and function of this window?",
     "choices": ["Hierarchy Window is to test and view the game in action", "Project Window which displays any and all assets that could potentially be included in a game", "Hierarchy Window which lists all GameObjects present in the scene", "Inspector Window which displays information about the currently selected GameObject"],
-    "answer": "Hierarchy Window which lists all GameObjects present in the scene"
+    "answer": "Hierarchy Window which lists all GameObjects present in the scene",
+    "hint": "This is on the right side of your screen!"
   }
 }
 

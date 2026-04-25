@@ -13,8 +13,8 @@
     </div>
 
     <h4 class="fw-bold">{{ q.question }}</h4>
-
-    <form method="POST" class="mt-4">
+    <div id="feedback"></div>
+    <form id="quizpage" method="POST" class="mt-4">
 
       {% for choice in q.choices %}
       <div class="choice-box p-3 border rounded mb-3" style="cursor:pointer;">
@@ -33,14 +33,10 @@
 
 </div>
 
-<script>
-$(document).ready(function(){
-  $(".choice-box").click(function(){
-    $(".choice-box").removeClass("bg-light border-primary");
-    $(this).addClass("bg-light border-primary");
-    $(this).find("input").prop("checked", true);
-  });
-});
-</script>
+  <script type="text/javascript" src="{{ url_for('static', filename='quiz.js') }}"></script>
+  <script>
+    const q = JSON.parse('{{ q|tojson }}')
+    console.log(q)
+  </script>
 
 {% endblock %}
